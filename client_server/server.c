@@ -62,6 +62,7 @@ void test () {
     printf("accept() successful=%d\n",cli_fd);
   }
 
+  
   printf("Just before closing the sockets\n");
   close(cli_fd);
   close(serv_fd);
