@@ -55,15 +55,15 @@ void test () {
   socklen_t cli_len = sizeof(cli_addr);
 
   cli_fd = accept(serv_fd,(struct sockaddr *)&cli_addr,&cli_len);
-  if(ret == -1) {
+  if(cli_fd == -1) {
      perror("accept() failed");
      exit(EXIT_FAILURE);
   } else {
     printf("accept() successful=%d\n",cli_fd);
   }
- 
-  
+
   printf("Just before closing the sockets\n");
   close(cli_fd);
   close(serv_fd);
+
 }
