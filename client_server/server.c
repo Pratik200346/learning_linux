@@ -51,7 +51,7 @@ void test()
 
   serv_addr.sin_family = AF_INET;
   serv_addr.sin_port = htons(4613);
-  inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr.s_addr);
+  inet_pton(AF_INET, "192.168.1.6", &serv_addr.sin_addr.s_addr);
 
   ret = bind(serv_fd, (struct sockaddr *)&serv_addr, sizeof(serv_addr));
   if (ret != 0)
